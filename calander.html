@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="calander.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("wIK84tePGeZaH7aRb");
+        })();
+    </script>
+</head>
+<body>
+    <h1>Please pick a day for our date!! <333 (Preferably on the weekend)</h1>
+    <div class="calendar">
+        <header>
+            <button id="prev"></button>
+            <h3></h3>
+            <button id="next"></button>
+        </header>
+        <ul class="days">
+            <li>Sun</li>
+            <li>Mon</li>
+            <li>Tue</li>
+            <li>Wed</li>
+            <li>Thu</li>
+            <li>Fri</li>
+            <li>Sat</li>
+        </ul>
+        <ul class="dates"></ul>
+    </div>
+    <div id="custom-modal" class="modal">
+        <div class="modal-content">
+            <p id="modal-message"></p>
+            <button id="confirm-btn">Confirm</button>
+            <button id="cancel-btn">Cancel</button>
+        </div>
+    </div>
+    <form id="redirect-form" action="endingPage.html" method="get" style="display: none;">
+        <input type="hidden" id="selected-date-input" name="selected-date">
+        <button type="submit" id="redirect-button"></button>
+    </form>
+    <script src="calander.js"></script>
+</body>
+</html>

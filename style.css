@@ -1,0 +1,484 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B");
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins','sans-serif';
+ }
+
+ html {
+    font-size: 62%;
+ }
+
+ body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    color: white;
+ }
+
+ header {
+    margin-top: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+ }
+
+ .logo {
+    font-size: 3rem;
+    color: pink;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+ }
+
+ .logo:hover {
+    transform: scale(1.1);
+ }
+
+ nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+ }
+
+nav a:hover,
+nav a.active {
+    color: pink;
+    border-bottom: 3px solid pink;
+}
+
+@media(max-width:995px) {
+    nav{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid pink;
+        border-bottom: 3px solid pink;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0, 0, 0, 1);
+    }
+}
+
+nav.active {
+    display: block;
+}
+
+nav a:hover,
+nav a.active {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-bottom: 0.5rem solid pink;
+
+}
+
+section {
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: #161616;
+}
+
+.home .home-content h1 {
+    font-weight: 700;
+    font-size: 6rem;
+    line-height: 1.3;
+}
+
+span {
+    color:pink;
+}
+
+.home-content h3 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-img {
+    border-radius: 40%;
+}
+
+.home-img img {
+    position: relative;
+    width: 30vw;
+    border-radius: 5%;
+    box-shadow: 0 0 25px solid pink;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block
+    }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: pink;
+    min-width: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+     display: block;
+     width: auto;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: wavy;
+    display: block;
+}
+
+.dropdown-content:hover {
+    background-color: white;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid pink;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: white;
+}
+
+.day {
+    display: flex;
+    justify-content: left;
+    position: relative;
+    border-radius: 1px;
+    border-color: white;
+    padding: 2rem;
+}
+
+.social-icons a:hover {
+    color: #161616;
+    transform: scale(1.3) translateY(-5px);
+    background-color: pink;
+    box-shadow: 0 0 25px pink;
+}
+
+#btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: pink;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid pink;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+#btn:hover {
+    transform: scale3d(1.03);
+    background-color: pink;
+    color: black;
+    box-shadow: 0 0 25px pink;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+#btn2 {
+    display: inline-block;
+    position: absolute;
+    padding: 1rem 3.2rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: pink;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid pink;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+#btn2:hover {
+    transform: scale3d(1.03);
+    background-color: pink;
+    color: black;
+    box-shadow: 0 0 25px pink;
+}
+
+#or {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    font-size: 2rem;
+    font-weight: 400;
+    color: pink;
+}
+
+#or:hover {
+    animation: shake 5s;
+}
+
+#clock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    position: relative;
+}
+
+#clock {
+    position: relative;
+    animation: borderAnimation 5s infinite;
+    font-size: 1.5rem;
+    font-weight: 200;
+    width: 325px;
+    max-width: 500px; 
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid white;
+    color: pink;
+    text-align: center;
+    margin-top: 3rem; 
+    margin-left: 2rem;
+    white-space: nowrap;
+}
+
+.typing-text span {
+    position: relative;
+}
+
+.typing-text span::before {
+    content: "It's been 8 months!";
+    color: pink;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after {
+    content: "";
+    background-color: #161616;
+    position: absolute;
+    width: calc(100% + 8);
+    height: 100%;
+    border-left: 3px solid #161616;
+    right: -2;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-color: rgba(255, 182, 193, 1); /* Light Pink */
+    }
+    75% {
+        border-color: rgba(219, 112, 147, 1); /* Pale Violet Red */
+    }
+    100% {
+        border-color: rgba(255, 182, 193, 1); /* Light Pink */
+    }
+}
+
+#message {
+    border: 5px solid rgba(255, 182, 193, 1); 
+    animation: borderAnimation 3s; 
+}
+
+@keyframes cursor {
+    to {
+        border-left: 3px solid;
+    }
+}
+
+/* This will change the words on the main sceen text */
+@keyframes words {
+    0%, 40% {
+        content: "I love you <3";
+    }
+    41%, 60% {
+        content: "3/14/25";
+    }
+    61%, 80% {
+        content: "Date?";
+    }
+    81%, 100% {
+        content: "Yes or No :3"
+    }
+}
+
+@media (max-width: 1000px) {
+    .home {
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 995px) {
+    .home {
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+
+/* Ending page */
+.endingWords {
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 10%;
+    font-size: 3rem;
+    color: pink;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.endingWords:hover {
+    transform: scale(1.5);
+    color: white;
+    text-transform: uppercase;
+}
+
+.lastThing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: #000;
+    overflow: hidden;
+    border: 5px solid pink;
+}
+
+#gif {
+    position: relative;
+    width: 20vw;
+    top: 20%;
+    display: flex;
+    justify-content: center;
+    border: 4px solid lightpink;
+    border-radius: 70%;
+}
+
+.heart-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.falling-heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: pink;
+    transform: rotate(-45deg);
+    animation: fall 10s linear infinite;
+}
+
+.falling-heart::before,
+.falling-heart::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: pink;
+    border-radius: 50%;
+}
+
+.falling-heart::before {
+    top: -10px;
+    left: 0;
+}
+
+.falling-heart::after {
+    top: 0;
+    left: 10px;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-color: rgba(255, 182, 193, 1); /* Light Pink */
+    }
+    25% {
+        border-color: rgba(255, 105, 180, 1); /* Hot Pink */
+    }
+    50% {
+        border-color: rgba(255, 20, 147, 1); /* Deep Pink */
+    }
+    75% {
+        border-color: rgba(219, 112, 147, 1); /* Pale Violet Red */
+    }
+    100% {
+        border-color: rgba(255, 182, 193, 1); /* Light Pink */
+    }
+}

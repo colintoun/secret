@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Thank youuu</title>
+</head>
+<body class="lastThing">
+        <h1 class="endingWords">Thank you bby, I love you so much!!!!!</h1>
+    <img id="gif" src="datOneGif.gif" alt="Image">
+    <div class="heart-container"></div>
+    <style>
+        .lastThing {
+            opacity: 0;
+            transition: opacity 0.1s;
+        }
+         .fade-in {
+            animation: fadeIn 7s forwards;
+            }
+  
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const heartContainer = document.querySelector('.heart-container');
+        for (let i = 0; i < 100; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('falling-heart');
+                heart.style.left = `${Math.random() * 100}vw`;
+                heart.style.top = `${Math.random() * -150}vh`;
+                heart.style.animationDelay = `${Math.random() * 10}s`;
+                heartContainer.appendChild(heart);
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll(".home, .calendar, .modal, .home-content, .home-img, .social-icons, #clock-container");
+
+    elements.forEach(element => {
+        element.classList.add("slow-fade-in");
+    });
+
+    const links = document.querySelectorAll("a");
+
+    links.forEach(link => {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            const targetUrl = this.getAttribute("href");
+
+            document.body.classList.add("fade-out");
+
+            setTimeout(() => {
+                window.location.href = targetUrl;
+            }, 500);
+        });
+    });
+
+    document.body.classList.add("fade-in");
+});
+    </script>
+</body>
+</html>
